@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoundCloud Player</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container_Iran_Podcast">
+      <div class="audio-player">
+        <button id="playButton" class="play-button">
+          <img
+            id="playButtonIcon"
+            class="play-button-icon"
+            src="assets/icons/play.svg"
+            alt="Play Button"
+          />
+        </button>
+
+        <div class="player-body">
+          <div id="waveform" class="waveform"></div>
+
+          <div class="controls">
+            <div class="volume">
+              <img
+                id="volumeIcon"
+                class="volume-icon"
+                src="assets/icons/volume.svg"
+                alt="Volume"
+              />
+              <input
+                id="volumeSlider"
+                class="volume-slider"
+                type="range"
+                name="volume-slider"
+                min="0"
+                max="100"
+                value="50"
+              />
+
+              <button
+                class="btn_Iran_Podcast"
+                onclick="wavesurfer.skipBackward()"
+              >
+                <img src="assets/icons/Backward.svg" alt="Play Button" />
+              </button>
+              <button
+                class="btn_Iran_Podcast"
+                onclick="wavesurfer.skipForward()">
+                <img src="assets/icons/Forward.svg" alt="Forward Button" />
+              </button>
+            </div>
+           
+            <div class="timecode">
+              <span id="currentTime">00:00:00</span>
+              <span class="timesplitor">/</span>
+              <span id="totalDuration">00:00:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="assets/js/wavesurfer.js"></script>
+    <script src="assets/js/wavesurfer.cursor.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
